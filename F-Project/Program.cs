@@ -20,10 +20,6 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapGet("/", context =>
-{
-    context.Response.Redirect("/fpt.html");
-    return Task.CompletedTask;
-});
+app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}"); 
 
 app.Run();

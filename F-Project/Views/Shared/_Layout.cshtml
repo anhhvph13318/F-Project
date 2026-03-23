@@ -1,43 +1,103 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - F_Project</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/F_Project.styles.css" asp-append-version="true" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>FPT Telecom - C&ocirc;ng ty Cổ phần Viễn th&ocirc;ng FPT</title>
+    <meta name="description" content="Cổng th&ocirc;ng tin ch&iacute;nh thức về c&aacute;c g&oacute;i cước mạng Internet FPT, dịch vụ lắp mạng wifi FPT, Truyền h&igrave;nh FPT Play, FPT Camera, F-Safe Go, FPT Smart Home v&agrave; Hi FPT.">
+    <meta name="keywords" content="Internet FPT, Truyền h&igrave;nh FPT, FPT Camera, FPT Play Box,  FPT Play, Thanh to&aacute;n điện tử FPT Pay">
+
+    <meta property="og:title" content="FPT Telecom - C&ocirc;ng ty Cổ phần Viễn th&ocirc;ng FPT">
+    <meta property="og:description" content="Cổng th&ocirc;ng tin ch&iacute;nh thức về c&aacute;c g&oacute;i cước mạng Internet FPT, dịch vụ lắp mạng wifi FPT, Truyền h&igrave;nh FPT Play, FPT Camera, F-Safe Go, FPT Smart Home v&agrave; Hi FPT.">
+    <meta property="og:image" content="https://hi-static.fpt.vn/sys/shop/prod/2026-03-01/69a39e98ce61c_Thi%E1%BA%BFt%20k%E1%BA%BF%20ch%C6%B0a%20c%C3%B3%20t%C3%AAn%20%281%29.png">
+    <meta property="og:locale" content="vi">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://fpt.vn/vi" />
+    <link rel="shortcut icon" href="https://fpt.vn/favicons/favicon.ico?v=v1.45.02" type="image/x-icon" />
+    <meta name="google" content="notranslate">
+    <meta name="csrf-token" content="aHiaFGcRFPc85RRAgaY5k0QeUzzDkODhn0WZSBKO" />
+
+    <!-- CSS -->
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/normalize.css?v=v1.45.02" rel="stylesheet">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/fonts/sf-pro-display/stylesheet.css" rel="stylesheet">
+    <link href="https://fpt.vn/modules/web/plugins/jquery/jquery.modal.min.css?v=v1.45.02" rel="stylesheet">
+
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/header.css?v=v1.45.02" rel="stylesheet"
+          type="text/css">
+
+    <!-- Swiper CSS -->
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/plugin/swiper/swiper-bundle.min.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/plugin/swiper/banner-swiper.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/plugin/embla/embla-package.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/plugin/swiper/tabs-swiper.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/plugin/swiper/categories-swiper.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/plugin/swiper/showcase-swiper.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/plugin/swiper/promotion-swiper.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/plugin/swiper/news-swiper.css?v=v1.45.02" rel="stylesheet" type="text/css">
+
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/banner.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/package-section.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/featured-products.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/product-categories.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/product-showcase.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/product-promotion.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/news-section.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/footer.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/footer-mobile.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/package-tabs-dynamic.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/tooltip.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/mobile-drawer.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/search.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/contract-modal.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/location-modal.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/sku-card.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/survey-widget.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/components.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025/assets/css/fptvn-ccp-manage-v1.0.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/gauge.css?v=v1.45.02" rel="stylesheet" type="text/css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/select2-custom.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/assets/frontend/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/home.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/sale-man-box.css?v=v1.45.02" rel="stylesheet" type="text/css">
+
+    <link href="https://fpt.vn/frontend_layout_2025_vibecode/assets/css/bottom-navigation.css?v=v1.45.02" rel="stylesheet" type="text/css">
+    <style>
+        ._live-chat-wrapper_k60tv_63 {
+            bottom: 70px !important;
+        }
+    </style>
+    <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-5MLCMQ2');</script>
+
+    <meta name="smartbanner:title" content="Hi FPT">
+    <meta name="smartbanner:author" content="FPT Telecom">
+    <meta name="smartbanner:price" content="FREE">
+    <meta name="smartbanner:price-suffix-apple" content=" - In the App Store">
+    <meta name="smartbanner:price-suffix-google" content=" - In Google Play">
+    <meta name="smartbanner:icon-apple" content="https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/b3/f9/56/b3f956d2-357c-5ae3-9d2c-d6f7abe92304/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/217x0w.png">
+    <meta name="smartbanner:icon-google" content="https://lh3.googleusercontent.com/kjrGoTEjgsHSMBuQuMoEKOJEMxyBQD06uvSzvGd2cCvmYebBpoXM3abvv4YDhlhIg3M=s180-rw">
+    <meta name="smartbanner:button" content="Mở App ngay">
+    <meta name="smartbanner:rating-Itunes" content="70.654646489439%">
+    <meta name="smartbanner:rating-Google" content="84.99462127686%">
+    <meta name="smartbanner:button-url-apple" content="https://itunes.apple.com/vn/app/hi-fpt/id1144417173">
+    <meta name="smartbanner:button-url-google" content="https://play.google.com/store/apps/details?id=com.rad.hifpt">
+    <meta name="smartbanner:enabled-platforms" content="android,ios">
+    <link href="https://fpt.vn/assets/frontend/smart_banner/smartbanner.min.css" rel="stylesheet">
+
+
+
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">F_Project</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="/fpt.html">Home Page</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="">
+        <main role="main" class="">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - F_Project - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
