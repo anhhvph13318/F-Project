@@ -1387,7 +1387,7 @@
                             </div>
 
                             <div class="row-btn">
-                                <a href="https://fpt.vn/shop/internet/register/speed-x10-pro-iq4s" class="btn-blue">Đăng ký ngay</a>
+                            <a href="https://localhost:7139/Internet/Register?name=FPT SpeedX10 Pro - IQ4S&price=1699000" class="btn-blue">Đăng ký ngay</a>
                             </div>
                         </div>
                     </div>
@@ -1462,22 +1462,26 @@
                     </div>
 
                     <div class="col-right">
-                        <form id="formPush" action="https://fpt.vn/service/push-potential-customer">
+                        <form id="formPush">
+
                             <div class="col-input">
-                                <label class="label-support" for="input-name">Họ tên <sup>*</sup></label>
-                                <input id="cus_name" class="input-text" type="text" placeholder="Nguyễn Văn A">
+                                <label class="label-support">Họ tên <sup>*</sup></label>
+                                <input id="fullname" class="input-text" type="text" placeholder="Nguyễn Văn A">
                                 <span class="text-err" id="name-error"></span>
                             </div>
+
                             <div class="col-input">
-                                <label class="label-support" for="input-number-phone">Số điện thoại <sup>*</sup></label>
-                                <input id="phone_number" type="text" class="input-text" maxlength="10" inputmode="numeric" pattern="[0-9]*" placeholder="Nhập số điện thoại">
+                                <label class="label-support">Số điện thoại <sup>*</sup></label>
+                                <input id="phone" type="text" class="input-text" maxlength="10"
+                                       inputmode="numeric" pattern="[0-9]*" placeholder="Nhập số điện thoại">
                                 <span class="text-err" id="phone-error"></span>
                             </div>
 
                             <div class="button-submit">
-                                <label class="label-support" for="">&nbsp;</label>
-                                <button type="button" onclick="Service.createPotentialCustomer();">Nhận tư vấn</button>
+                                <label class="label-support">&nbsp;</label>
+                                <button type="button" onclick="handleSubmit()">Nhận tư vấn</button>
                             </div>
+
                         </form>
                         <p class="mobile">
                             Bằng việc ấn vào Đăng ký Internet bạn đã đồng ý để FPT Telecom liên hệ tư vấn sản phẩm dịch
@@ -1546,7 +1550,7 @@
                 <span class="s-label">Tạm tính</span>
                 <span class="product-price-m">1.699.000đ</span>
             </div>
-            <a href="https://fpt.vn/shop/internet/register/speed-x10-pro-iq4s" class="btn-blue">Đăng ký ngay</a>
+            <a href="https://localhost:7139/Internet/Register?name=FPT SpeedX10 Pro - IQ4S&price=1699000" class="btn-blue">Đăng ký ngay</a>
         </div>
     </div>
     <!----------end -->
@@ -2030,6 +2034,46 @@
         </div>
     </div>
 </div>	<!-- jQuery -->
+    <script>
+                    function handleSubmit() {
+            const name = document.getElementById('fullname').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            if (name && /^[0-9]{10}$/.test(phone)) {
+
+                // Gửi dữ liệu lên server
+                fetch('/Customer/Create', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        fullName: name,
+                        phone: phone,
+                    })
+                })
+                .then(res => res.json())
+                .then(data => {
+
+                    // Hiện popup thành công
+                    document.getElementById("popup-text").innerText =
+                        "Đã đăng ký thành công";
+
+                    document.getElementById("popup").style.display = "flex";
+
+                })
+                .catch(err => {
+                    console.error(err);
+                            Swal.fire({
+            icon: 'success',
+            title: 'Thành công!',
+            text: 'Đã đăng ký thành công!',
+            confirmButtonColor: '#ff6600'
+        });
+                });
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="https://fpt.vn/frontend_layout_2025_vibecode/assets/js/jquery-3.7.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 	<script src="https://fpt.vn/modules/web/plugins/jquery/jquery.modal.min.js"></script>

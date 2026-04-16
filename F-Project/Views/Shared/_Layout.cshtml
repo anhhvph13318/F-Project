@@ -71,6 +71,29 @@
         ._live-chat-wrapper_k60tv_63 {
             bottom: 70px !important;
         }
+
+        .topbar-link {
+            color: white;
+            display: inline-block;
+            padding: 8px 12px;
+            text-decoration: none;
+        }
+
+        /* mobile fix */
+        @@media (max-width: 768px) {
+            .topbar-left
+
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .topbar-link {
+            display: inline-block;
+        }
+
+        }
     </style>
     <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-5MLCMQ2');</script>
 
@@ -117,7 +140,12 @@
                        data-sp-extra='{"area_item_id": 1.1.2, "element_name": "page_khach_hang_doanh_nghiep", "element_type": "link", "event_custom": "click_menu", "event_description": "Click sang page khách hàng doanh nghiệp"}'
                        href="https://fpt.vn/vi/khach-hang-doanh-nghiep"
                        class="topbar-link ">Khách hàng doanh nghiệp</a> *@
-                    <a href="https://localhost:7139/Admin/Index" style="color:white">Admin</a>
+                    <a href="/Admin/Index"
+                       class="topbar-link"
+                       data-sp-action="click_page"
+                       data-sp-area="header">
+                        Admin
+                    </a>
                 </div>
                 <div class="topbar-right">
                     <!-- Popup chọn location -->
@@ -550,7 +578,6 @@
                         <a target="_blank" href="tel:02473002222">024 7300 2222</a>
                     </div>
                 </div>
-                <p class="footer-representative">Người đại diện: Ông Hoàng Việt Anh</p>
             </div>
 
             <div class="footer-accordions">
@@ -709,11 +736,6 @@
             </div>
 
             <!-- Certificate Badge -->
-            <div class="footer-certificate">
-                <a href="http://online.gov.vn/Home/WebDetails/35561?AspxAutoDetectCookieSupport=1" target="_blank">
-                    <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/bct-certificate.png" alt="Bộ Công thương">
-                </a>
-            </div>
         </div>
 
         <!-- Desktop Footer Layout -->
