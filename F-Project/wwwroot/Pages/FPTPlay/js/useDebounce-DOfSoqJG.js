@@ -1,0 +1,1 @@
+function m(){function i(t,o=300){let e;return(...u)=>{e&&clearTimeout(e),e=window.setTimeout(()=>{t(...u)},o)}}function r(t,o=300){let e;return(...u)=>new Promise((c,s)=>{e&&clearTimeout(e),e=window.setTimeout(async()=>{try{const n=await t(...u);c(n)}catch(n){s(n)}},o)})}return{debounce:i,debouncePromise:r}}export{m as u};

@@ -1,0 +1,334 @@
+
+.btn-blue {
+    background-color: #4564ED;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #4564ED;
+}
+#modalReferFriends .btn{
+    color: #333;
+}
+#modalReferFriends .box-qr-share .btn-blue {
+    border: 1px solid #4564ED;
+    color: #fff;
+}
+.btn-gray {
+    background-color: #F7F7F8;
+    font-size: 16px;
+    font-weight: 500;
+}
+.underline {
+    text-decoration: underline;
+}
+
+.color-inherit {
+    color: inherit;
+}
+
+#modalReferFriends .p-refer-friends-qr-box .copy-btn{
+    margin-top: -44px;
+    float: right;
+    position: absolute;
+    right: 7px;
+    z-index: 5;
+    background: #f5f5f5;
+}
+#modalReferFriends .p-refer-friends-qr-box .copy-btn img{
+    max-width: 100%;
+}
+
+#modalReferFriends .p-refer-friends-qr-box .box-qr{
+    min-height: 150px;
+    padding: 30px 0;
+    background: #FAFAFA;
+    background-size: cover;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+#modalReferFriends .modal-dialog{
+    max-width: 512px;
+}
+#modalReferFriends .modal-content{
+    padding: 15px 20px 25px;
+    font-size: 16px;
+    border-radius: 15px;
+}
+#modalReferFriends .p-refer-friends-qr-box{
+    padding: 8px 0 0;
+}
+#modalReferFriends h4{
+    font-size: 20px;
+    color: #181D27;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+
+}
+#modalReferFriends .box-qr-share button,
+#modalReferFriends .box-qr-share button:active,
+#modalReferFriends .box-qr-share button:focus{
+    padding: 0px 15px;
+    font-size: 16px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px #e7e7e7 solid;
+    width: 100%;
+    line-height: 46px;
+    outline: none;
+    box-shadow: none;
+}
+#modalReferFriends .box-qr-share button.btn-blue:hover,
+#modalReferFriends .box-qr-share button.btn-blue:active,
+#modalReferFriends .box-qr-share button.btn-blue:focus{
+    color: white;
+}
+#btn_download_p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    padding: 0 20px;
+    line-height: 40px;
+    border: 0;
+    background-color: #F7F7F8;
+    font-size: 16px;
+    color: #3D3D3D;
+    border-radius: 8px;
+}
+#btn_download_p:hover,
+#btn_download_p:active,
+#btn_download_p:focus{
+    border: 0;
+    outline: none;
+    box-shadow: none;
+}
+#modalReferFriends .box-qr-share .btn img {
+    margin-top: -2px;
+    margin-right: 8px;
+}
+#btn_download_p>img{
+    margin-right: 8px;
+    top: 3px;
+}
+/* qr code */
+#p_qr_code_refer{
+    position: relative;
+}
+
+
+#p_qr_code_refer .qrcode-scanner {
+    width: 100%;
+    height: 190px;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+#p_qr_code_refer .qrcode-scanner::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+#p_qr_code_refer .qrcode-scanner::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 106px;
+    background: url('../img/bg/scan-qrcode.svg') center top no-repeat;
+    background-size: 779px;
+    animation: scannings 1s linear alternate infinite;
+    left: 0;
+    top: 22px;
+}
+#p_qr_code_refer canvas {
+    background: greenyellow;
+    position: relative;
+    z-index: 2;
+}
+
+#p_qr_code_refer .qrcode-scanner-l {
+    width: 100%;
+    height: 190px;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background: url('../img/bg/frame-qrcode.svg') center 13px no-repeat;
+    background-size: 158px;
+}
+@keyframes scannings {
+    0% {
+        transform: translatey(0px);
+    }
+
+    100% {
+        transform: translatey(140px);
+    }
+}
+#p_qr_code_refer .row-refer-friend .box-qr-share .btn {
+    width: 100%;
+    border-radius: 7px;
+    line-height: 36px;
+    border: 0;
+}
+#pShareQRModel .modal-dialog{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+#pShareQRModel .modal-content{
+    max-width: 400px;
+    font-size: 12px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 280px;
+}
+#pShareQRModel h4{
+    font-size: 16px;
+}
+#pShareQRModel .modal-body{
+    min-height: 300px;
+    padding: 30px 20px;
+}
+#pShareQRModel .copy-btn{
+    margin-top: -47px;
+    float: right;
+    z-index: 5;
+    position: absolute;
+    right: 16px;
+    background: white;
+}
+#pShareQRModel .box-share{
+    display: -webkit-inline-box;
+    cursor: pointer;
+    width: 64px;
+}
+#pShareQRModel .box-share img{
+    margin-bottom: 10px;
+}
+#pShareQRModel p{
+    margin: 10px 0 20px;
+}
+#pShareQRModel pre{
+    margin-top: 15px;
+    background: white;
+    padding: 15px;
+    line-height: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+@keyframes scanning
+{
+  0%{transform: translatey(0px);}
+  100%{transform: translatey(130px);}
+}
+
+#p_box_refer_toast{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 200001;
+}
+.toast{
+    min-width: 250px;
+    padding: 15px;
+    background-color: rgb(237, 247, 237);
+    color: rgb(30, 70, 32);
+    border-radius: 3px;
+    display: none;
+    margin-bottom: 10px;
+}
+.toast .btn-close{
+    float: right;
+}
+.toast.show {
+    display: block;
+    animation: fadein 0.5s, fadeout 0.5s 4.5s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+#modalReferFriends #p_refer_code,
+#modalReferFriends #p_refer_link{
+    min-height: 38px;
+    font: 400 16px 'SFProDisplay', sans-serif;
+    color: #3D3D3D;
+    height: 46px;
+    border: 0;
+    background: #F7F7F8;
+    padding: 12px;
+    line-height: 22px;
+    overflow: hidden;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+#modalReferFriends #p_refer_code {
+    margin-bottom: 16px;
+}
+
+#modalReferFriends .decscription {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #888;
+
+}
+#modalReferFriends .modal-dialog {
+    margin: 0 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+#modalReferFriends .p-refer-friends-qr-box .p_ma_gt,
+#modalReferFriends .p-refer-friends-qr-box .p_link_gt{
+    display: inline-block;
+    margin-bottom: 8px;
+}
+@media screen and (max-width: 540px) {
+    #modalReferFriends .modal-dialog {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #modalReferFriends #p_refer_link span {
+        display: inline-block;
+        max-width: calc(100% - 25px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    #modalReferFriends .modal-dialog {
+        margin: 15px;
+        top: unset;
+        left: unset;
+        transform: unset; 
+    }
+}

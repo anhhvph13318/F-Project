@@ -1,0 +1,27 @@
+@media screen and (min-width: 992px) {
+  .block_product .wid-content {
+    width: calc(65% - 60px);
+  }
+  .block_product .wid-qty {
+    width: 120px;
+  }
+  .block_product .wid-price {
+    width: calc(35% - 60px);
+  }
+  .block_product .wid-price .prices {
+    white-space: unset !important;
+    word-break: break-word !important;
+  }
+}
+
+.disp-change__qtydecr {
+  cursor: default !important;
+  background-image: url("data:image/svg+xml;utf8,<svg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M5 10H15' stroke='%23b0b0b0' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'/></svg>") !important;
+}
+
+.disp-change__qtyincr {
+  cursor: default !important;
+  background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 10H15" stroke="%23b0b0b0" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 15V5" stroke="%23b0b0b0" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>') !important;
+}
+
+/*# sourceMappingURL=net.css.map */

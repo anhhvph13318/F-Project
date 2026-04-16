@@ -90,14 +90,820 @@
     <link href="https://fpt.vn/assets/frontend/smart_banner/smartbanner.min.css" rel="stylesheet">
 
 
+    <link rel="stylesheet" href="~/Pages/Register/internetRegister-JRP4L6Br.css" />
+    <link rel="stylesheet" href="~/Pages/Register/Layout-Bt9z8IMK.css" />
+    <link rel="stylesheet" href="~/Pages/Register/navigation-CVT1nKu0.css" />
+    <link rel="stylesheet" href="~/Pages/Register/SaleEmail-2ogdfoxv.css" />
+    <link rel="stylesheet" href="~/Pages/Register/useFields-CzHLfan5.css" />
 
 </head>
 <body>
+    <header class="header header_area">
+        <!-- Thanh menu nhỏ màu xanh dương ở trên cùng -->
+        <div class="header-topbar">
+            <div class="container">
+                <div class="topbar-left">
+                    @* <a data-sp-action="click_page"
+                       data-sp-area="header"
+                       data-sp-area-position="1"
+                       data-sp-item-position="1.1"
+                       data-sp-extra='{"area_item_id": 1.1.1, "element_name": "page_khach_hang_ca_nhan", "element_type": "link", "event_custom": "click_menu", "event_description": "Click sang page khách hàng cá nhân"}'
+                       href="/vi"
+                       class="topbar-link active">Khách hàng cá nhân</a>
+                    <a data-sp-action="click_page"
+                       data-sp-area="header"
+                       data-sp-area-position="1"
+                       data-sp-item-position="1.2"
+                       data-sp-extra='{"area_item_id": 1.1.2, "element_name": "page_khach_hang_doanh_nghiep", "element_type": "link", "event_custom": "click_menu", "event_description": "Click sang page khách hàng doanh nghiệp"}'
+                       href="https://fpt.vn/vi/khach-hang-doanh-nghiep"
+                       class="topbar-link ">Khách hàng doanh nghiệp</a> *@
+                    <a href="https://localhost:7139/Admin/Index" style="color:white">Admin</a>
+                </div>
+                <div class="topbar-right">
+                    <!-- Popup chọn location -->
+                    <div class="topbar-item" id="locationSelector"
+                         data-sp-action="click_form"
+                         data-sp-area="header"
+                         data-sp-area-position="1"
+                         data-sp-item-position="1.3"
+                         data-sp-extra='{"area_item_id": "1.1.3", "element_name": "chon_vi_tri", "element_type": "button", "event_custom": "choose_location", "event_description": "Chọn location header"}'>
+                        <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/ic-location.png" alt="Location"
+                             class="topbar-icon">
+                        <span class="location-name">Chọn vị trí</span>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Main Menu -->
+        <div class="header-menu">
+            <div class="menu-wrapper">
+                <div class="menu-left">
+                    <!-- Mobile Menu Toggle Button -->
+                    <button class="menu-toggle">
+                        <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-menu.svg"
+                             alt="Menu" class="menu-toggle-icon">
+                    </button>
+
+
+                    <!-- Logo -->
+                    <a href="https://localhost:7139/#" class="logo">
+                        <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/logo-ftel.svg" alt="FPT Telecom" class="logo-img">
+                    </a>
+                    <!-- Navigation -->
+                    @*                     <nav class="main-nav">
+
+                        <div class="nav-item dropdown dropdown-fullwidth">
+                            <a data-sp-action="click_page"
+                               data-sp-area="header"
+                               data-sp-area-position="1"
+                               data-sp-item-position="2.1"
+                               data-sp-extra='{"area_item_id": "1.2.1", "element_name": "Sản phẩm dịch vụ", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Sản phẩm dịch vụ"}'
+                               href="#" class="nav-link nav-link-lv-1" data-id="8">
+                                Sản phẩm dịch vụ
+                                <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-arrow-down.png" alt="" class="dropdown-icon">
+                            </a>
+
+                            <div class="dropdown-menu">
+                                <div class="container">
+                                    <div class="row">
+
+                                        <div class="col-md-3">
+                                            <div class="dropdown-category">
+                                                <div class="category-header">
+                                                    <img src="https://fpt.vn/storage/upload/images/menus/icons/navbar/ic-menu-wifi.png" alt="" class="category-icon">
+                                                    <a data-sp-action="click_page"
+                                                       data-sp-area="header"
+                                                       data-sp-area-position="1"
+                                                       data-sp-item-position="null"
+                                                       data-sp-extra='{"area_item_id": null, "element_name": "Internet  Wifi", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Internet - Wifi"}'
+                                                       href="https://fpt.vn/internet" class="category-title nav-link-lv-2" data-id="16">Internet - Wifi</a>
+                                                </div>
+
+                                                <ul class="category-links">
+
+                                                    <li data-id="447">
+                                                        <a class="highlight nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "Combo Internet thể thao giải tr&iacute;", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Combo Internet thể thao giải tr&iacute;"}'
+                                                           target="_self" href="https://fpt.vn/ngoai-hang-anh" title="Combo Internet thể thao giải tr&iacute;" data-id="447">
+                                                            Combo Internet thể thao giải tr&iacute;
+                                                            <span class="badge-new">Mới</span>
+                                                        </a>
+                                                    </li>
+
+                                                    <li data-id="440">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "Internet WiFi 7", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Internet Wi-Fi 7"}'
+                                                           target="_self" href="https://fpt.vn/dang-ky-nang-cap-wifi7" title="Internet Wi-Fi 7" data-id="440">
+                                                            Internet Wi-Fi 7
+                                                        </a>
+                                                    </li>
+
+                                                    <li data-id="25">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "Internet c&aacute; nh&acirc;n", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Internet c&aacute; nh&acirc;n"}'
+                                                           target="_self" href="https://fpt.vn/internet/ca-nhan" title="Internet c&aacute; nh&acirc;n" data-id="25">
+                                                            Internet c&aacute; nh&acirc;n
+                                                        </a>
+                                                    </li>
+
+                                                    <li data-id="350">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "Internet gia đ&igrave;nh", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Internet gia đ&igrave;nh"}'
+                                                           target="_self" href="https://fpt.vn/internet/gia-dinh" title="Internet gia đ&igrave;nh" data-id="350">
+                                                            Internet gia đ&igrave;nh
+                                                        </a>
+                                                    </li>
+
+                                                    <li data-id="353">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "Internet game thủ", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Internet game thủ"}'
+                                                           target="_self" href="https://fpt.vn/internet/game-thu" title="Internet game thủ" data-id="353">
+                                                            Internet game thủ
+                                                        </a>
+                                                    </li>
+
+                                                    <li data-id="352">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "Internet doanh nghiệp", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Internet doanh nghiệp"}'
+                                                           target="_self" href="https://fpt.vn/internet/doanh-nghiep" title="Internet doanh nghiệp" data-id="352">
+                                                            Internet doanh nghiệp
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="dropdown-category">
+                                                <div class="category-header">
+                                                    <img src="https://fpt.vn/storage/upload/images/menus/icons/navbar/ic-menu-media.png" alt="" class="category-icon">
+                                                    <a data-sp-action="click_page"
+                                                       data-sp-area="header"
+                                                       data-sp-area-position="1"
+                                                       data-sp-item-position="null"
+                                                       data-sp-extra='{"area_item_id": null, "element_name": "Truyền h&igrave;nh &amp; Giải tr&iacute;", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Truyền h&igrave;nh &amp; Giải tr&iacute;"}'
+                                                       href="https://fpt.vn/truyen-hinh-fpt-play" class="category-title nav-link-lv-2" data-id="17">Truyền h&igrave;nh &amp; Giải tr&iacute;</a>
+                                                </div>
+
+                                                <ul class="category-links">
+
+                                                    <li data-id="384">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "FPT Play", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page FPT Play"}'
+                                                           target="_self" href="https://fpt.vn/truyen-hinh-fpt-play" title="FPT Play" data-id="384">
+                                                            FPT Play
+                                                        </a>
+                                                    </li>
+
+                                                    <li data-id="450">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "N&acirc;ng cấp g&oacute;i combo thể thao", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page N&acirc;ng cấp g&oacute;i combo thể thao"}'
+                                                           target="_self" href="https://fpt.vn/nang-cap" title="N&acirc;ng cấp g&oacute;i combo thể thao" data-id="450">
+                                                            N&acirc;ng cấp g&oacute;i combo thể thao
+                                                            <span class="badge-new">Mới</span>
+                                                        </a>
+                                                    </li>
+
+                                                    <li data-id="448">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "Combo Internet Ngoại hạng Anh", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Combo Internet Ngoại hạng Anh"}'
+                                                           target="_self" href="https://fpt.vn/ngoai-hang-anh#section_item_sub_breadcrumb_73" title="Combo Internet Ngoại hạng Anh" data-id="448">
+                                                            Combo Internet Ngoại hạng Anh
+                                                            <span class="badge-new">Mới</span>
+                                                        </a>
+                                                    </li>
+
+                                                    <li data-id="449">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "Lịch thi đấu Ngoại hạng Anh", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Lịch thi đấu Ngoại hạng Anh"}'
+                                                           target="_self" href="https://fpt.vn/ngoai-hang-anh/lich-thi-dau" title="Lịch thi đấu Ngoại hạng Anh" data-id="449">
+                                                            Lịch thi đấu Ngoại hạng Anh
+                                                            <span class="badge-new">Mới</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="nav-item dropdown dropdown-fullwidth">
+                            <a data-sp-action="click_page"
+                               data-sp-area="header"
+                               data-sp-area-position="1"
+                               data-sp-item-position="2.4"
+                               data-sp-extra='{"area_item_id": "1.2.4", "element_name": "Thông tin &amp; hỗ trợ", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Thanh to&aacute;n &amp; hỗ trợ"}'
+                               href="#" class="nav-link nav-link-lv-1" data-id="10">
+                                Thông tin &amp; hỗ trợ
+                                <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-arrow-down.png" alt="" class="dropdown-icon">
+                            </a>
+
+                            <div class="dropdown-menu">
+                                <div class="container">
+                                    <div class="row">
+
+                                        <div class="col-md-3">
+                                            <div class="dropdown-category">
+                                                <div class="category-header">
+                                                    <img src="https://fpt.vn/storage/upload/images/menus/icons/navbar/ic-menu-document.png" alt="" class="category-icon">
+                                                    <a data-sp-action="click_page"
+                                                       data-sp-area="header"
+                                                       data-sp-area-position="1"
+                                                       data-sp-item-position="null"
+                                                       data-sp-extra='{"area_item_id": null, "element_name": "Hỗ trợ th&ocirc;ng tin", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Hỗ trợ th&ocirc;ng tin"}'
+                                                       href="https://fpt.vn/ho-tro" class="category-title nav-link-lv-2" data-id="148">Hỗ trợ th&ocirc;ng tin</a>
+                                                </div>
+
+                                                <ul class="category-links">
+
+                                                    <li data-id="152">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "Hướng dẫn sử dụng", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Hướng dẫn sử dụng"}'
+                                                           target="_self" href="https://fpt.vn/ho-tro/huong-dan-su-dung" title="Hướng dẫn sử dụng" data-id="152">
+                                                            Hướng dẫn sử dụng
+                                                        </a>
+                                                    </li>
+
+                                                    <li data-id="153">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "Ch&iacute;nh s&aacute;ch &amp; quy tr&igrave;nh", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Ch&iacute;nh s&aacute;ch &amp; quy tr&igrave;nh"}'
+                                                           target="_self" href="https://fpt.vn/ho-tro/chinh-sach-quy-trinh" title="Ch&iacute;nh s&aacute;ch &amp; quy tr&igrave;nh" data-id="153">
+                                                            Ch&iacute;nh s&aacute;ch &amp; quy tr&igrave;nh
+                                                        </a>
+                                                    </li>
+
+                                                    <li data-id="354">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "Điều khoản", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Điều khoản"}'
+                                                           target="_self" href="https://fpt.vn/ho-tro/dieu-khoan" title="Điều khoản" data-id="354">
+                                                            Điều khoản
+                                                        </a>
+                                                    </li>
+
+                                                    <li data-id="154">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "C&acirc;u hỏi thường gặp", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page C&acirc;u hỏi thường gặp"}'
+                                                           target="_self" href="https://fpt.vn/ho-tro/cau-hoi-thuong-gap" title="C&acirc;u hỏi thường gặp" data-id="154">
+                                                            C&acirc;u hỏi thường gặp
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="col-md-3">
+                                            <div class="dropdown-category">
+                                                <div class="category-header">
+                                                    <img src="https://fpt.vn/storage/upload/images/menus/icons/navbar/ic-menu-support.png" alt="" class="category-icon">
+                                                    <span class="category-title" data-id="150">Li&ecirc;n hệ hỗ trợ</span>
+                                                </div>
+
+                                                <ul class="category-links">
+
+                                                    <li data-id="160">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "Tổng đ&agrave;i 0362506222", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Tổng đ&agrave;i 0362506222"}'
+                                                           target="_self" href="tel:0362506222" title="Tổng đ&agrave;i 0362506222" data-id="160">
+                                                            Tổng đ&agrave;i 0362506222
+                                                        </a>
+                                                    </li>
+
+                                                    <li data-id="192">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "Ứng dụng Hi FPT", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Ứng dụng Hi FPT"}'
+                                                           target="_self" href="https://fpt.vn/hi-fpt" title="Ứng dụng Hi FPT" data-id="192">
+                                                            Ứng dụng Hi FPT
+                                                        </a>
+                                                    </li>
+
+                                                    <li data-id="391">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "K&ecirc;nh Zalo OA", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page K&ecirc;nh Zalo OA"}'
+                                                           target="_blank" href="https://zalo.me/fpttelecom" title="K&ecirc;nh Zalo OA" data-id="391">
+                                                            K&ecirc;nh Zalo OA
+                                                        </a>
+                                                    </li>
+
+                                                    <li data-id="167">
+                                                        <a class=" nav-link-lv-3"
+                                                           data-sp-action="click_page"
+                                                           data-sp-area="header"
+                                                           data-sp-area-position="1"
+                                                           data-sp-item-position="null"
+                                                           data-sp-extra='{"area_item_id": null, "element_name": "Ph&ograve;ng giao dịch", "element_type": "menu", "event_custom": "click_menu", "event_description": "Click sang page Ph&ograve;ng giao dịch"}'
+                                                           target="_self" href="https://fpt.vn/vi/khach-hang-ca-nhan/ho-tro/lien-he-24-7/diem-giao-dich" title="Ph&ograve;ng giao dịch" data-id="167">
+                                                            Ph&ograve;ng giao dịch
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+ *@                </div>
+
+
+                <!-- Search -->
+                <div class="menu-right">
+
+                    <!-- button nhân viên hỗ trợ  -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Mobile Location Bar -->
+        <div class="mobile-location-bar">
+            <div class="location-item" id="mobileLocationSelector">
+                <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-location.svg" alt="Location"
+                     class="location-icon">
+                <span class="location-text">Chọn vị trí</span>
+            </div>
+        </div>
+
+        <!-- Contract Popup -->
+    </header>
     <div class="">
         <main role="main" class="">
             @RenderBody()
         </main>
+            <script src="~/Pages/FPTPlay/js/sp-isc.js"></script>
+
     </div>
+    <footer class="footer">
+        <!-- Mobile Footer Layout -->
+        <div class="footer-mobile">
+            <!-- Logo -->
+            <div class="footer-logo">
+                <a href="https://fpt.vn/vi">
+                    <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/fpt-telecom-logo-footer.svg" alt="FPT Telecom">
+                </a>
+            </div>
+
+            <!-- Certificate Info -->
+            <div class="footer-info">
+                <p>Giấy chứng nhận ĐKDN số 0101778163 do Sở Kế hoạch Đầu tư Thành phố Hà Nội cấp ngày 28/07/2005</p>
+                <p>Giấy phép cung cấp dịch vụ viễn thông số 255/GP-CVT do Cục Viễn Thông cấp ngày 07/11/2022</p>
+            </div>
+
+            <!-- Company Info -->
+            <div class="footer-contact">
+                <h4>Công ty Cổ phần Viễn thông FPT</h4>
+                <div class="footer-contact-list">
+                    <div class="footer-contact-item">
+                        <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-location-footer.svg" alt="Location" class="contact-icon">
+                        <p>Tầng 9, Block A, tòa nhà FPT Cầu Giấy, số 10 Phạm Văn Bạch, quận Cầu Giấy, TP. Hà Nội</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-email.svg" alt="Email" class="contact-icon">
+                        <a href="mailto:hotrokhachhang@fpt.com">hotrokhachhang@fpt.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-phone-footer.svg" alt="Phone" class="contact-icon">
+                        <a target="_blank" href="tel:02473002222">024 7300 2222</a>
+                    </div>
+                </div>
+                <p class="footer-representative">Người đại diện: Ông Hoàng Việt Anh</p>
+            </div>
+
+            <div class="footer-accordions">
+                <!-- Section -->
+                <div class="footer-section">
+                    <button class="footer-accordion-header">
+                        <h3 data-id="36">Về FPT Telecom</h3>
+                        <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/linear/ic-arrow-down.png" alt="Toggle" class="footer-accordion-icon  open">
+                    </button>
+                    <div class="footer-accordion-content open">
+                        <ul>
+                            <li data-id="37">
+                                <a target="_self" href="https://fpt.vn/vi/ve-fpt-telecom/gioi-thieu-chung.html" title="Giới thiệu chung">Giới thiệu chung</a>
+                            </li>
+                            <li data-id="38">
+                                <a target="_self" href="https://fpt.vn/vi/ve-fpt-telecom/lien-ket-thanh-vien.html" title="Li&ecirc;n kết - Th&agrave;nh vi&ecirc;n">Li&ecirc;n kết - Th&agrave;nh vi&ecirc;n</a>
+                            </li>
+                            <li data-id="39">
+                                <a target="_self" href="https://fpt.vn/vi/ve-fpt-telecom/khach-hang-doi-tac" title="Kh&aacute;ch h&agrave;ng - Đối t&aacute;c">Kh&aacute;ch h&agrave;ng - Đối t&aacute;c</a>
+                            </li>
+                            <li data-id="40">
+                                <a target="_self" href="https://fpt.vn/vi/ve-fpt-telecom/quan-he-co-dong" title="Quan hệ cổ đ&ocirc;ng">Quan hệ cổ đ&ocirc;ng</a>
+                            </li>
+                            <li data-id="325">
+                                <a target="_self" href="https://fpt.vn/vi/ve-fpt-telecom/tap-doan-fpt.html" title="Tập đo&agrave;n FPT">Tập đo&agrave;n FPT</a>
+                            </li>
+                            <li data-id="43">
+                                <a target="_self" href="https://fptjobs.com/" title="Tuyển dụng">Tuyển dụng</a>
+                            </li>
+                            <li data-id="327">
+                                <a target="_self" href="https://fpt.vn/tin-tuc" title="Tin tức">Tin tức</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Section -->
+                <div class="footer-section">
+                    <button class="footer-accordion-header">
+                        <h3 data-id="41">Kh&aacute;ch h&agrave;ng FPT Telecom</h3>
+                        <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/linear/ic-arrow-down.png" alt="Toggle" class="footer-accordion-icon  ">
+                    </button>
+                    <div class="footer-accordion-content ">
+                        <ul>
+                            <li data-id="42">
+                                <a target="_self" href="https://fpt.vn/vi/khach-hang-ca-nhan/ho-tro/ho-tro-thong-tin/huong-dan-su-dung" title="Hướng dẫn sử dụng dịch vụ">Hướng dẫn sử dụng dịch vụ</a>
+                            </li>
+                            <li data-id="44">
+                                <a target="_self" href="https://fpt.vn/pay" title="Thanh to&aacute;n h&oacute;a đơn">Thanh to&aacute;n h&oacute;a đơn</a>
+                            </li>
+                            <li data-id="45">
+                                <a target="_self" href="https://fpt.vn/vi/khach-hang-ca-nhan/ho-tro/phan-hoi-khach-hang/gop-y.html" title="Góp ý khách hàng">Góp ý khách hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Section -->
+                <div class="footer-section">
+                    <button class="footer-accordion-header">
+                        <h3 data-id="46">Sản phẩm dịch vụ</h3>
+                        <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/linear/ic-arrow-down.png" alt="Toggle" class="footer-accordion-icon  ">
+                    </button>
+                    <div class="footer-accordion-content ">
+                        <ul>
+                            <li data-id="48">
+                                <a target="_self" href="https://fpt.vn/internet" title="Lắp đặt WiFi Internet">Lắp đặt WiFi Internet</a>
+                            </li>
+                            <li data-id="437">
+                                <a target="_self" href="https://fpt.vn/truyen-hinh-fpt-play" title="Internet - Truyền h&igrave;nh FPT Play">Internet - Truyền h&igrave;nh FPT Play</a>
+                            </li>
+                            <li data-id="438">
+                                <a target="_self" href="https://fpt.vn/thiet-bi-thong-minh/camera" title="FPT Camera">FPT Camera</a>
+                            </li>
+                            <li data-id="439">
+                                <a target="_self" href="https://fpt.vn/thiet-bi-thong-minh/smart-home" title="FPT Smart Home">FPT Smart Home</a>
+                            </li>
+                            <li data-id="49">
+                                <a target="_self" href="https://fpt.vn/tin-tuc/khuyen-mai" title="Khuyến m&atilde;i">Khuyến m&atilde;i</a>
+                            </li>
+                            <li data-id="50">
+                                <a target="_self" href="https://fpt.vn/vi/khach-hang-ca-nhan/ho-tro/lien-he-24-7/diem-giao-dich" title="T&igrave;m điểm giao dịch">T&igrave;m điểm giao dịch</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="footer-divider"></div>
+
+            <!-- Social Icons -->
+            <div class="footer-social">
+                <a target="_blank" href="https://fpt.vn/hifpt.php" class="social-icon"
+                   data-sp-action="click_page"
+                   data-sp-area="section_footer_social"
+                   data-sp-area-position="11"
+                   data-sp-item-position="1"
+                   data-sp-extra='{"area_item_id": "11.1", "element_name": "icon_hifpt", "element_type": "icon", "event_custom": "click_contact",
+                    "event_description": "Contact social channel", "contact_channel": "hifpt" }'
+                   data-parent-id='fptvn-footer'>
+                    <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-hi-fpt.png" alt="Hi FPT">
+                </a>
+                @* <a target="_blank" href="https://www.youtube.com/user/likefpt" class="social-icon"
+                   data-sp-action="click_page"
+                   data-sp-area="section_footer_social"
+                   data-sp-area-position="11"
+                   data-sp-item-position="2"
+                   data-sp-extra='{"area_item_id": "11.2", "element_name": "icon_youtube", "element_type": "icon", "event_custom": "click_contact",
+                    "event_description": "Contact social channel", "contact_channel": "youtube" }'
+                   data-parent-id='fptvn-footer'>
+                    <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-youtube.png" alt="YouTube">
+                </a> *@
+                @* <a target="_blank" href="https://www.instagram.com/fpt.telecom/" class="social-icon"
+                   data-sp-action="click_page"
+                   data-sp-area="section_footer_social"
+                   data-sp-area-position="11"
+                   data-sp-item-position="3"
+                   data-sp-extra='{"area_item_id": "11.3", "element_name": "icon_instagram", "element_type": "icon", "event_custom": "click_contact",
+                    "event_description": "Contact social channel", "contact_channel": "instagram" }'
+                   data-parent-id='fptvn-footer'>
+                    <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-instagram.png" alt="Instagram">
+                </a> *@
+                <a target="_blank" href="http://zalo.me/0362506222" class="social-icon"
+                   data-sp-action="click_page"
+                   data-sp-area="section_footer_social"
+                   data-sp-area-position="11"
+                   data-sp-item-position="4"
+                   data-sp-extra='{"area_item_id": "11.4", "element_name": "icon_facebook", "element_type": "icon", "event_custom": "click_contact",
+                    "event_description": "Contact social channel", "contact_channel": "hifpt" }'
+                   data-parent-id='fptvn-footer'>
+                    <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-zalo.png" alt="Zalo">
+                </a>
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=61584403121154" class="social-icon"
+                   data-sp-action="click_page"
+                   data-sp-area="section_footer_social"
+                   data-sp-area-position="11"
+                   data-sp-item-position="5"
+                   data-sp-extra='{"area_item_id": "11.5", "element_name": "icon_facebook", "element_type": "icon", "event_custom": "click_contact",
+                    "event_description": "Contact social channel", "contact_channel": "facebook" }'
+                   data-parent-id='fptvn-footer'>
+                    <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-facebook.png" alt="Facebook">
+                </a>
+
+            </div>
+
+            <!-- Hotline -->
+            <div class="footer-hotline">
+                <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/hotline-icon.svg" alt="Phone" class="hotline-icon">
+                <a target="_blank" href="tel:0362506222" class="hotline-number"
+                   data-sp-action="click_page"
+                   data-sp-area="section_footer_hotline"
+                   data-sp-area-position="11"
+                   data-sp-item-position="6"
+                   data-sp-extra='{"area_item_id": "11.6", "element_name": "icon_hotline", "element_type": "icon", "event_custom": "click_contact",
+                    "event_description": "Contact social channel", "contact_channel": "hotline" }'
+                   data-parent-id='fptvn-footer'>0362 506 222</a>
+            </div>
+
+            <!-- Certificate Badge -->
+            <div class="footer-certificate">
+                <a href="http://online.gov.vn/Home/WebDetails/35561?AspxAutoDetectCookieSupport=1" target="_blank">
+                    <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/bct-certificate.png" alt="Bộ Công thương">
+                </a>
+            </div>
+        </div>
+
+        <!-- Desktop Footer Layout -->
+        <div class="footer-desktop">
+            <!-- Top Row: Logo + Social + Hotline -->
+            <div class="footer-top-row">
+                <div class="footer-logo">
+                    <a href="https://fpt.vn/vi">
+                        <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/fpt-telecom-logo-footer.svg" alt="FPT Telecom">
+                    </a>
+                </div>
+                <div class="footer-social-group">
+                    <div class="footer-social">
+                        <a target="_blank" href="https://fpt.vn/hifpt.php" class="social-icon"
+                           data-sp-action="click_page"
+                           data-sp-area="section_footer_social"
+                           data-sp-area-position="11"
+                           data-sp-item-position="1"
+                           data-sp-extra='{"area_item_id": "11.1", "element_name": "icon_hifpt", "element_type": "icon", "event_custom": "click_contact",
+                            "event_description": "Contact social channel", "contact_channel": "hifpt" }'
+                           data-parent-id='fptvn-footer'>
+                            <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-hi-fpt.png" alt="Hi FPT">
+                        </a>
+                        @* <a target="_blank" href="https://www.youtube.com/user/likefpt" class="social-icon"
+                           data-sp-action="click_page"
+                           data-sp-area="section_footer_social"
+                           data-sp-area-position="11"
+                           data-sp-item-position="2"
+                           data-sp-extra='{"area_item_id": "11.2", "element_name": "icon_youtube", "element_type": "icon", "event_custom": "click_contact",
+                            "event_description": "Contact social channel", "contact_channel": "youtube" }'
+                           data-parent-id='fptvn-footer'>
+                            <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-youtube.png" alt="YouTube">
+                        </a> *@
+                        @* <a target="_blank" href="https://www.instagram.com/fpt.telecom/" class="social-icon"
+                           data-sp-action="click_page"
+                           data-sp-area="section_footer_social"
+                           data-sp-area-position="11"
+                           data-sp-item-position="3"
+                           data-sp-extra='{"area_item_id": "11.3", "element_name": "icon_instagram", "element_type": "icon", "event_custom": "click_contact",
+                            "event_description": "Contact social channel", "contact_channel": "instagram" }'
+                           data-parent-id='fptvn-footer'>
+                            <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-instagram.png" alt="Instagram">
+                        </a> *@
+                        <a target="_blank" href="http://zalo.me/0362506222" class="social-icon"
+                           data-sp-action="click_page"
+                           data-sp-area="section_footer_social"
+                           data-sp-area-position="11"
+                           data-sp-item-position="4"
+                           data-sp-extra='{"area_item_id": "11.4", "element_name": "icon_zalo", "element_type": "icon", "event_custom": "click_contact",
+                            "event_description": "Contact social channel", "contact_channel": "zalo" }'
+                           data-parent-id='fptvn-footer'>
+                            <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-zalo.png" alt="Zalo">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=61584403121154" class="social-icon"
+                           data-sp-action="click_page"
+                           data-sp-area="section_footer_social"
+                           data-sp-area-position="11"
+                           data-sp-item-position="5"
+                           data-sp-extra='{"area_item_id": "11.5", "element_name": "icon_facebook", "element_type": "icon", "event_custom": "click_contact",
+                            "event_description": "Contact social channel", "contact_channel": "facebook" }'
+                           data-parent-id='fptvn-footer'>
+                            <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-facebook.png" alt="Facebook">
+                        </a>
+                    </div>
+                    <!-- Hotline -->
+                    <div class="footer-hotline">
+                        <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/hotline-icon.svg" alt="Phone" class="hotline-icon">
+                        <a target="_blank" href="tel:0362506222" class="hotline-number"
+                           data-sp-action="click_page"
+                           data-sp-area="section_footer_hotline"
+                           data-sp-area-position="11"
+                           data-sp-item-position="6"
+                           data-sp-extra='{"area_item_id": "11.6", "element_name": "icon_hotline", "element_type": "icon", "event_custom": "click_contact",
+                            "event_description": "Contact social channel", "contact_channel": "hotline" }'
+                           data-parent-id='fptvn-footer'>0362 506 222</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="footer-divider"></div>
+
+            <!-- Main Content Row -->
+            <div class="footer-main-content">
+                <!-- Left Column: Certificate Info + Company Info -->
+                <div class="footer-left-column">
+                    <div class="footer-info">
+                        <p>Giấy chứng nhận ĐKDN số 0101778163 do Sở Kế hoạch Đầu tư Thành phố Hà Nội cấp ngày 28/07/2005</p>
+                        <p>Giấy phép cung cấp dịch vụ viễn thông số 255/GP-CVT do Cục Viễn Thông cấp ngày 07/11/2022</p>
+                    </div>
+
+                    <div class="footer-contact">
+                        <h4>Công ty Cổ phần Viễn thông FPT</h4>
+                        <div class="footer-contact-list">
+                            <div class="footer-contact-item">
+                                <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-location-footer.svg" alt="Location">
+                                <p>Tầng 9, Block A, tòa nhà FPT Cầu Giấy, số 10 Phạm Văn Bạch, quận Cầu Giấy, TP. Hà Nội</p>
+                            </div>
+                            <div class="footer-contact-item">
+                                <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-email.svg" alt="Email">
+                                <a href="mailto:hotrokhachhang@fpt.com">hotrokhachhang@fpt.com</a>
+                            </div>
+                            <div class="footer-contact-item">
+                                <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/icon-phone-footer.svg" alt="Phone">
+                                <a href="tel:02473002222">024 7300 2222</a>
+                            </div>
+                        </div>
+                        @*                         <p class="footer-representative">Người đại diện: Ông Hoàng Việt Anh</p>
+ *@                    </div>
+                </div>
+                <!-- Right Columns: Links -->
+                <div class="footer-links">
+                    <!-- Section -->
+                    <div class="footer-column">
+                        <h3 class="column-title" data-id="36">Về FPT Telecom</h3>
+                        <ul class="link-list">
+                            <li data-id="37">
+                                <a target="_self" href="https://fpt.vn/vi/ve-fpt-telecom/gioi-thieu-chung.html" title="Giới thiệu chung">Giới thiệu chung</a>
+                            </li>
+                            <li data-id="38">
+                                <a target="_self" href="https://fpt.vn/vi/ve-fpt-telecom/lien-ket-thanh-vien.html" title="Li&ecirc;n kết - Th&agrave;nh vi&ecirc;n">Li&ecirc;n kết - Th&agrave;nh vi&ecirc;n</a>
+                            </li>
+                            <li data-id="39">
+                                <a target="_self" href="https://fpt.vn/vi/ve-fpt-telecom/khach-hang-doi-tac" title="Kh&aacute;ch h&agrave;ng - Đối t&aacute;c">Kh&aacute;ch h&agrave;ng - Đối t&aacute;c</a>
+                            </li>
+                            <li data-id="40">
+                                <a target="_self" href="https://fpt.vn/vi/ve-fpt-telecom/quan-he-co-dong" title="Quan hệ cổ đ&ocirc;ng">Quan hệ cổ đ&ocirc;ng</a>
+                            </li>
+                            <li data-id="325">
+                                <a target="_self" href="https://fpt.vn/vi/ve-fpt-telecom/tap-doan-fpt.html" title="Tập đo&agrave;n FPT">Tập đo&agrave;n FPT</a>
+                            </li>
+                            <li data-id="43">
+                                <a target="_self" href="https://fptjobs.com/" title="Tuyển dụng">Tuyển dụng</a>
+                            </li>
+                            <li data-id="327">
+                                <a target="_self" href="https://fpt.vn/tin-tuc" title="Tin tức">Tin tức</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Section -->
+                    <div class="footer-column">
+                        <h3 class="column-title" data-id="41">Kh&aacute;ch h&agrave;ng FPT Telecom</h3>
+                        <ul class="link-list">
+                            <li data-id="42">
+                                <a target="_self" href="https://fpt.vn/vi/khach-hang-ca-nhan/ho-tro/ho-tro-thong-tin/huong-dan-su-dung" title="Hướng dẫn sử dụng dịch vụ">Hướng dẫn sử dụng dịch vụ</a>
+                            </li>
+                            <li data-id="44">
+                                <a target="_self" href="https://fpt.vn/pay" title="Thanh to&aacute;n h&oacute;a đơn">Thanh to&aacute;n h&oacute;a đơn</a>
+                            </li>
+                            <li data-id="45">
+                                <a target="_self" href="https://fpt.vn/vi/khach-hang-ca-nhan/ho-tro/phan-hoi-khach-hang/gop-y.html" title="Góp ý khách hàng">Góp ý khách hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Section -->
+                    <div class="footer-column">
+                        <h3 class="column-title" data-id="46">Sản phẩm dịch vụ</h3>
+                        <ul class="link-list">
+                            <li data-id="48">
+                                <a target="_self" href="https://fpt.vn/internet" title="Lắp đặt WiFi Internet">Lắp đặt WiFi Internet</a>
+                            </li>
+                            <li data-id="437">
+                                <a target="_self" href="https://fpt.vn/truyen-hinh-fpt-play" title="Internet - Truyền h&igrave;nh FPT Play">Internet - Truyền h&igrave;nh FPT Play</a>
+                            </li>
+                            <li data-id="438">
+                                <a target="_self" href="https://fpt.vn/thiet-bi-thong-minh/camera" title="FPT Camera">FPT Camera</a>
+                            </li>
+                            <li data-id="439">
+                                <a target="_self" href="https://fpt.vn/thiet-bi-thong-minh/smart-home" title="FPT Smart Home">FPT Smart Home</a>
+                            </li>
+                            <li data-id="49">
+                                <a target="_self" href="https://fpt.vn/tin-tuc/khuyen-mai" title="Khuyến m&atilde;i">Khuyến m&atilde;i</a>
+                            </li>
+                            <li data-id="50">
+                                <a target="_self" href="https://fpt.vn/vi/khach-hang-ca-nhan/ho-tro/lien-he-24-7/diem-giao-dich" title="T&igrave;m điểm giao dịch">T&igrave;m điểm giao dịch</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate Badge -->
+            @*  <div class="footer-certificate">
+                <a href="http://online.gov.vn/Home/WebDetails/35561?AspxAutoDetectCookieSupport=1" target="_blank">
+                    <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/bct-certificate.png" alt="Bộ Công thương">
+                </a>
+            </div> *@
+        </div>
+    </footer>	<!-- Search Overlay -->
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

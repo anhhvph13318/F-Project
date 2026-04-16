@@ -1,0 +1,690 @@
+﻿<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 15px;
+    }
+    .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1.5rem 1rem;
+        font-family: var(--font-sans);
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: 500;
+        color: #F37021;
+        margin-bottom: 1.5rem;
+    }
+
+        .logo span {
+            color: #0055A5;
+        }
+
+
+    .step {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .step-circle {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .step.active .step-circle {
+        background: #F37021;
+        color: #fff;
+    }
+
+    .step.inactive .step-circle {
+        background: var(--color-background-secondary);
+        color: var(--color-text-secondary);
+        border: 0.5px solid var(--color-border-tertiary);
+    }
+
+    .step-label {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .step.active .step-label {
+        color: var(--color-text-primary);
+    }
+
+    .step.inactive .step-label {
+        color: var(--color-text-secondary);
+    }
+
+    .step-line {
+        width: 60px;
+        height: 1px;
+        background: var(--color-border-tertiary);
+        margin: 0 8px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 1.5rem;
+    }
+    @@media (max-width: 720px) {
+        .grid
+
+    {
+        grid-template-columns: 1fr;
+    }
+
+    }
+
+    .card {
+        background: var(--color-background-primary);
+        border: 0.5px solid var(--color-border-tertiary);
+        border-radius: var(--border-radius-lg);
+        padding: 1.25rem;
+    }
+
+    .section-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--color-text-primary);
+        margin-bottom: 1.25rem;
+    }
+
+    .group-label {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--color-text-secondary);
+        background: var(--color-background-secondary);
+        padding: 10px 14px;
+        border-radius: var(--border-radius-md);
+        margin-bottom: 1rem;
+    }
+
+    .field-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+        .field label {
+            font-size: 13px;
+            color: var(--color-text-secondary);
+        }
+
+            .field label .req {
+                color: #E24B4A;
+                margin-left: 2px;
+            }
+
+        .field input {
+            width: 100%;
+            height: 40px;
+            padding: 0 12px;
+            border: 0.5px solid var(--color-border-tertiary);
+            border-radius: var(--border-radius-md);
+            background: var(--color-background-primary);
+            color: var(--color-text-primary);
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.15s;
+        }
+
+            .field input:focus {
+                border-color: #F37021;
+                box-shadow: 0 0 0 2px rgba(243,112,33,0.15);
+            }
+
+            .field input.error {
+                border-color: #E24B4A;
+                box-shadow: 0 0 0 2px rgba(226,75,74,0.12);
+            }
+
+            .field input::placeholder {
+                color: var(--color-text-tertiary);
+            }
+
+    .err-msg {
+        font-size: 12px;
+        color: #E24B4A;
+        min-height: 16px;
+    }
+
+    .order-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--color-text-primary);
+        margin-bottom: 1.25rem;
+    }
+
+    .order-section {
+        border: 0.5px solid var(--color-border-tertiary);
+        border-radius: var(--border-radius-md);
+        margin-bottom: 1rem;
+        overflow: hidden;
+    }
+
+    .order-section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 14px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--color-text-primary);
+    }
+
+    .order-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 14px;
+        font-size: 13px;
+        color: var(--color-text-secondary);
+        border-top: 0.5px solid var(--color-border-tertiary);
+    }
+
+        .order-row .val {
+            color: var(--color-text-primary);
+            font-weight: 500;
+        }
+
+            .order-row .val.empty {
+                color: var(--color-text-tertiary);
+                font-weight: 400;
+                font-style: italic;
+            }
+
+    .order-total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px;
+        border-top: 0.5px solid var(--color-border-tertiary);
+        margin-top: 4px;
+    }
+
+        .order-total .label {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--color-text-primary);
+        }
+
+        .order-total .amount {
+            font-size: 22px;
+            font-weight: 500;
+            color: #0055A5;
+        }
+
+    .btn-continue {
+        width: 100%;
+        height: 44px;
+        background: #ccc;
+        color: #fff;
+        border: none;
+        border-radius: var(--border-radius-md);
+        font-size: 15px;
+        font-weight: 500;
+        cursor: not-allowed;
+        margin-top: 1rem;
+        transition: background 0.2s;
+    }
+
+        .btn-continue.active {
+            background: #F37021;
+            cursor: pointer;
+        }
+
+            .btn-continue.active:hover {
+                background: #d9621a;
+            }
+
+    .note {
+        font-size: 12px;
+        color: var(--color-text-secondary);
+        margin-top: 10px;
+        line-height: 1.6;
+    }
+
+        .note a {
+            color: #0055A5;
+            text-decoration: none;
+        }
+
+    .back-link {
+        font-size: 14px;
+        color: var(--color-text-secondary);
+        cursor: pointer;
+        margin-top: 1rem;
+        display: inline-block;
+    }
+    /* Reset nhẹ */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+        background: #f5f7fb;
+        color: #333;
+    }
+
+    /* Container */
+    .wrap {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    /* Logo */
+    .logo {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+        .logo span {
+            color: #ff6600;
+        }
+
+    /* Stepper */
+    .stepper {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* thêm dòng này */
+        margin-bottom: 30px;
+    }
+
+    .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 13px;
+    }
+
+    .step-circle {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 6px;
+        font-size: 16px;
+    }
+
+    .step.active .step-circle {
+        background: #ff6600;
+        color: #fff;
+    }
+
+    .step.active .step-label {
+        font-weight: 600;
+    }
+
+    .step.inactive {
+        opacity: 0.5;
+    }
+
+    .step-line {
+        height: 2px;
+        background: #ddd;
+        margin: 0 10px;
+    }
+
+    /* Grid */
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 25px;
+    }
+
+    /* Card */
+    .card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    /* Titles */
+    .section-title,
+    .order-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .group-label {
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: #666;
+    }
+
+    /* Fields */
+    .field-row {
+        display: flex;
+        gap: 15px;
+    }
+
+    .field {
+        flex: 1;
+    }
+
+        .field label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+    .req {
+        color: red;
+    }
+
+    .field input {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        outline: none;
+        transition: 0.2s;
+    }
+
+        .field input:focus {
+            border-color: #ff6600;
+            box-shadow: 0 0 0 2px rgba(255,102,0,0.2);
+        }
+
+    /* Error */
+    .err-msg {
+        font-size: 12px;
+        color: red;
+    }
+
+    /* Back link */
+    .back-link {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #666;
+        cursor: pointer;
+    }
+
+        .back-link:hover {
+            color: #ff6600;
+        }
+
+    /* Order section */
+    .order-section {
+        margin-bottom: 15px;
+    }
+
+    .order-section-head {
+        font-weight: 600;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    /* Rows */
+    .order-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+
+    .val {
+        font-weight: 500;
+    }
+
+    .empty {
+        color: #999;
+    }
+
+    /* Total */
+    .order-total {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    /* Button */
+    .btn-continue {
+        width: 100%;
+        margin-top: 15px;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: #ff6600;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+        .btn-continue:hover {
+            background: #e65c00;
+        }
+
+        .btn-continue:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+    /* Note */
+    .note {
+        font-size: 12px;
+        margin-top: 10px;
+        color: #666;
+    }
+
+        .note a {
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+    /* Responsive */
+    @@media (max-width: 900px) {
+        .grid
+
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .field-row {
+        flex-direction: column;
+    }
+
+    }
+</style>
+
+<div class="wrap">
+
+    <div class="stepper">
+        <div class="step active">
+            <div class="step-circle">✎</div>
+            <div class="step-label">Thông tin đăng ký</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step inactive">
+            <div class="step-circle">✓</div>
+            <div class="step-label">Hoàn tất đơn hàng</div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div>
+            <div class="card">
+                <div class="section-title">Thông tin đăng ký</div>
+                <div class="group-label">Thông tin cá nhân</div>
+                <div class="field-row">
+                    <div class="field">
+                        <label>Họ tên <span class="req">*</span></label>
+                        <input type="text" placeholder="Nhập họ tên" id="fullname" oninput="handleInput()" onblur="validateField('fullname')" />
+                        <span class="err-msg" id="err-name"></span>
+                    </div>
+                    <div class="field">
+                        <label>Số điện thoại <span class="req">*</span></label>
+                        <input type="text" placeholder="Nhập số điện thoại" id="phone" oninput="handleInput()" onblur="validateField('phone')" maxlength="10" />
+                        <span class="err-msg" id="err-phone"></span>
+                    </div>
+                </div>
+            </div>
+            <a href="https://localhost:7139/#" class="back-link">← Quay lại</a>
+        </div>
+
+        <div>
+            <div class="card">
+                <div class="order-title">Thông tin đơn hàng</div>
+                <div class="order-section">
+                    <div class="order-section-head">
+                        Thông tin khách hàng
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+                    </div>
+                    <div class="order-row">
+                        <span>Họ tên</span>
+                        <span class="val empty" id="disp-name">Chưa nhập</span>
+                    </div>
+                    <div class="order-row">
+                        <span>Số điện thoại</span>
+                        <span class="val empty" id="disp-phone">Chưa nhập</span>
+                    </div>
+                </div>
+                <div class="order-section">
+                    <div class="order-section-head">
+                        Thông tin thanh toán
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+                    </div>
+                    <div class="order-row"><span id="comboname" oninput="handleInput()">@ViewBag.name</span><span class="val">@((ViewBag.price).ToString("N0", new System.Globalization.CultureInfo("vi-VN")))đ</span></div>
+                </div>
+                <div class="order-total">
+                    <span class="label">Tạm tính</span>
+                    <span class="amount" id="comboprice" oninput="handleInput()">@((ViewBag.price).ToString("N0", new System.Globalization.CultureInfo("vi-VN")))đ</span>
+                </div>
+                <button class="btn-continue" id="btn-continue" disabled onclick="handleSubmit()">Tiếp tục</button>
+                <div class="note">Bằng việc bấm Tiếp tục quý khách đã đồng ý để FPT Telecom liên hệ tư vấn sản phẩm dịch vụ phù hợp với nhu cầu. Chi tiết xem tại <a href="#">Chính sách xử lý dữ liệu cá nhân</a></div>
+            </div>
+        </div>
+    </div>
+    <div id="popup" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.3); justify-content:center; align-items:center;">
+        <div style="background:#fff; padding:20px; border-radius:10px; text-align:center; min-width:250px;">
+            <p id="popup-text"></p>
+            <button onclick="closePopup()" style="margin-top:10px; padding:8px 15px; border:none; background:#ff6600; color:#fff; border-radius:6px;">OK</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function handleInput() {
+      const name = document.getElementById('fullname').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+
+      const dispName = document.getElementById('disp-name');
+      const dispPhone = document.getElementById('disp-phone');
+
+      if (name) {
+        dispName.textContent = name;
+        dispName.classList.remove('empty');
+      } else {
+        dispName.textContent = 'Chưa nhập';
+        dispName.classList.add('empty');
+      }
+
+      if (phone) {
+        dispPhone.textContent = phone;
+        dispPhone.classList.remove('empty');
+      } else {
+        dispPhone.textContent = 'Chưa nhập';
+        dispPhone.classList.add('empty');
+      }
+
+      const valid = name.length >= 2 && /^[0-9]{9,11}$/.test(phone);
+      const btn = document.getElementById('btn-continue');
+      btn.disabled = !valid;
+      btn.className = 'btn-continue' + (valid ? ' active' : '');
+    }
+
+    function validateField(id) {
+      const input = document.getElementById(id);
+      const val = input.value.trim();
+      if (id === 'fullname') {
+        const err = document.getElementById('err-name');
+        if (!val) { err.textContent = 'Vui lòng nhập họ tên'; input.classList.add('error'); }
+        else if (val.length < 2) { err.textContent = 'Họ tên quá ngắn'; input.classList.add('error'); }
+        else { err.textContent = ''; input.classList.remove('error'); }
+      }
+      if (id === 'phone') {
+        const err = document.getElementById('err-phone');
+        if (!val) { err.textContent = 'Vui lòng nhập số điện thoại'; input.classList.add('error'); }
+        else if (!/^[0-9]{9,11}$/.test(val)) { err.textContent = 'Số điện thoại không hợp lệ'; input.classList.add('error'); }
+        else { err.textContent = ''; input.classList.remove('error'); }
+      }
+    }
+
+    function handleSubmit() {
+        const name = document.getElementById('fullname').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const comboname = document.getElementById('comboname').innerText.trim();
+        const comboprice = document.getElementById('comboprice').innerText.trim();
+        if (name && /^[0-9]{10}$/.test(phone)) {
+
+            // Gửi dữ liệu lên server
+            fetch('/Customer/Create', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    fullName: name,
+                    phone: phone,
+                    comboname: comboname,
+                    comboprice: comboprice,
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+
+                // Hiện popup thành công
+                    Swal.fire({
+        icon: 'success',
+        title: 'Thành công!',
+        text: 'Đã đăng ký thành công!',
+        confirmButtonColor: '#ff6600'
+    });
+
+            })
+            .catch(err => {
+                console.error(err);
+                alert("Có lỗi xảy ra!");
+            });
+        }
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

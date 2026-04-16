@@ -1,0 +1,22 @@
+.temp-price-ap {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 16px;
+    justify-content: space-between;
+}
+
+.temp-price-ap {
+    display: flex;
+}
+
+.temp-price-ap .label span {
+    color: #3d3d3d;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.temp-price-ap .price span {
+    font-weight: 700;
+    font-size: 32px;
+    color: #4564ed;
+}

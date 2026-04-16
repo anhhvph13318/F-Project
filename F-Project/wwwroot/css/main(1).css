@@ -1,0 +1,38 @@
+.agreement {
+  line-height: 22px;
+}
+.agreement-gap__1 {
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+.agreement-gap__2 {
+  margin-top: 15px;
+}
+.agreement-text {
+  font-size: 14px;
+  color: #888888;
+  font-weight: 400;
+}
+.agreement-link {
+  font-weight: 700;
+  color: #888888;
+}
+.agreement-link:hover {
+  color: #888888;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+  .agreement {
+    text-align: center;
+    line-height: 18px;
+  }
+  .agreement-gap__1 {
+    margin-bottom: 4px;
+  }
+  .agreement-text {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

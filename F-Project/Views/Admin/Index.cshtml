@@ -1,0 +1,182 @@
+﻿@{
+    Layout = null;
+}
+@model List<F_Project.Models.Customer>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <a href="https://localhost:7139/#" class="logo">
+            <img src="https://fpt.vn/frontend_layout_2025_vibecode/assets/images/logo-ftel.svg"
+                 alt="FPT Telecom"
+                 class="logo-img"
+                 style="height:36px;width:109px">
+        </a>
+        <ul>
+            <li class="active"><i class="fa fa-users"></i> Khách hàng</li>
+            <li><i class="fa fa-box"></i> Đơn hàng</li>
+            <li><i class="fa fa-cog"></i> Cài đặt</li>
+        </ul>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+        <div class="header">
+            <h3>📊 Dashboard</h3>
+        </div>
+
+        <div class="card">
+            <h4>Danh sách khách hàng</h4>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Họ tên</th>
+                        <th>SĐT</th>
+                        <th>Tên combo</th>
+                        <th>Giá combo</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int i = 1;
+                    }
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.FullName</td>
+                            <td>@item.Phone</td>
+                            <td>@item.ComboName</td>
+                            <td>@item.ComboPrice</td>
+                            <td>
+                                <button class="btn delete" onclick="deleteCustomer(@item.Id)">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: #f5f7fb;
+    }
+
+    /* Layout */
+    .layout {
+        display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 220px;
+        height: 100vh;
+        background: #1e293b;
+        color: #fff;
+        padding: 20px;
+    }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            padding: 12px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+            .sidebar li:hover,
+            .sidebar .active {
+                background: #334155;
+            }
+
+    /* Main */
+    .main {
+        flex: 1;
+        padding: 20px;
+    }
+
+    /* Header */
+    .header {
+        margin-bottom: 20px;
+    }
+
+    /* Card */
+    .card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    /* Table */
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table th {
+            background: #f1f5f9;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .table tr:hover {
+            background: #fafafa;
+        }
+
+    /* Button */
+    .btn {
+        padding: 6px 10px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+        .btn.delete {
+            background: #ef4444;
+            color: #fff;
+        }
+
+            .btn.delete:hover {
+                background: #dc2626;
+            }
+</style>
+
+<script>
+    function deleteCustomer(id) {
+        if (!confirm("Bạn có chắc muốn xóa không?")) return;
+
+        fetch('/Customer/Delete/' + id, {
+            method: 'DELETE'
+        })
+        .then(() => {
+            location.reload();
+        });
+    }
+</script>
